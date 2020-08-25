@@ -1,3 +1,3 @@
-# tinder-for-sandwhiches
+# tinder-for-sandwiches
 
-This is a repo for tinder for sandwhiches
+This is a repo for tinder for sandwiches
