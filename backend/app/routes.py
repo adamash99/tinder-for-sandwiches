@@ -8,7 +8,7 @@ def index():
     return app.send_static_file('index.html')
 
 @app.route('/test')
-def index():
+def test():
     return "hello world"
 
 @app.route('/addwich', methods=['PUT'])
