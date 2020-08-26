@@ -36,6 +36,8 @@ def get_sandwiches():
             "yes_votes" : wich['yes_votes'],
             "no_votes" : wich['no_votes']
         })
+    import random
+    random.shuffle(wiches)
     return jsonify(wiches)
     
 @app.route('/votewich/<string:sand_id>/<string:vote>', methods=["PUT"])
