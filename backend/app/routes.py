@@ -7,6 +7,9 @@ from app.models import Sandwich
 def index():
     return app.send_static_file('index.html')
 
+@app.route('/test')
+def index():
+    return "hello world"
 
 @app.route('/addwich', methods=['PUT'])
 def add_sandwich():
