@@ -17,7 +17,7 @@ export default () => {
     })
     const headers = { "Content-type": "application/json; charset=UTF-8" }
 
-    fetch('/addwich', { method: "PUT", body: body, headers: headers })
+    fetch('/api/addwich', { method: "PUT", body: body, headers: headers })
   }
 
   return (

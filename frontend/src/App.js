@@ -12,14 +12,14 @@ function App() {
 
   const swipeClicked = (posVote) => {
     const sand_id = wiches[wichNumber]['id']
-    console.log('/votewich/' + sand_id + "/" + (posVote ? "yes" : "no"))
-    fetch('/votewich/' + sand_id + "/" + (posVote ? "yes" : "no"), { method: "PUT" })
+    // console.log('/votewich/' + sand_id + "/" + (posVote ? "yes" : "no"))
+    fetch('/api/votewich/' + sand_id + "/" + (posVote ? "yes" : "no"), { method: "PUT" })
     setWichNumber(wichNumber + 1)
   }
 
   // gets list of sandwiches
   useEffect(() => {
-    fetch('/getwich')
+    fetch('/api/getwich')
       .then(response => response.json())
       .then(data => setWiches(data))
       .then(data => console.log(data))

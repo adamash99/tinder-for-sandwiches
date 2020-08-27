@@ -5,19 +5,19 @@ import os
 from backend.models import Sandwich
 
 
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
     
 connect(db='tfw', host=constants.MONGO_KEY)
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.js')
+    return app.send_static_file('index.html')
 
-@app.route('/test')
+@app.route('/api/test')
 def test():
     return "hello world"
 
-@app.route('/addwich', methods=['PUT'])
+@app.route('/api/addwich', methods=['PUT'])
 def add_sandwich():
     data = request.get_json()
     sandwich = Sandwich(
@@ -34,7 +34,7 @@ def add_sandwich():
     return "Sandwich added to DB"
 
 
-@app.route('/getwich', methods=['GET'])
+@app.route('/api/getwich', methods=['GET'])
 def get_sandwiches():
     wiches = []
     for wich in Sandwich.objects:
@@ -51,7 +51,7 @@ def get_sandwiches():
     return jsonify(wiches)
 
 
-@app.route('/votewich/<string:sand_id>/<string:vote>', methods=["PUT"])
+@app.route('/api/votewich/<string:sand_id>/<string:vote>', methods=["PUT"])
 def vote_sandwiches(sand_id, vote):
     sands = Sandwich.objects(id=sand_id)
     if len(sands) > 1:
@@ -65,5 +65,5 @@ def vote_sandwiches(sand_id, vote):
         return "Error"
     return "Sandwich added to DB"
 
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
