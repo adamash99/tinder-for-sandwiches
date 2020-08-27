@@ -1,1 +1,0 @@
-MONGO_KEY="mongodb+srv://adam:adam@cluster0.mr3ry.mongodb.net/tfw?authSource=admin&replicaSet=atlas-ubggmc-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
