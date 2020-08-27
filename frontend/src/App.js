@@ -54,7 +54,7 @@ function App() {
   if (wiches.length === 0) {
     return (
       <div id="not-loading">
-        {/* <p>Not loading. Please refresh or try again later</p> */}
+        Hey
       </div>
     )
   }
