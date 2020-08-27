@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
 from mongoengine import connect
-import constants
+from backend import constants
 import os
-from models import Sandwich
+from backend.models import Sandwich
+
 
 app = Flask(__name__, static_folder='./../frontend/build', static_url_path='/')
 
