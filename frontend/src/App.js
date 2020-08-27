@@ -54,7 +54,7 @@ function App() {
   if (wiches.length === 0) {
     return (
       <div id="not-loading">
-        Hey
+        This shouldn't show up. Either mongoDB is down, or Adam fucked something up. Probably the latter, please let him know.
       </div>
     )
   }
