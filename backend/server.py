@@ -5,7 +5,7 @@ import os
 from backend.models import Sandwich
 
 
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
     
 connect(db='tfw', host=constants.MONGO_KEY)
 
