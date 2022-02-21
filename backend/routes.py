@@ -2,6 +2,8 @@ from app import app
 from flask import request, jsonify
 from app.models import Sandwich
 
+#moved routes to server file
+
 
 @app.route('/')
 def index():
