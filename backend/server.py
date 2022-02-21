@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from mongoengine import connect
-from constants import MONGO_KEY
+from .constants import MONGO_KEY
 import os
 from models import Sandwich
 
