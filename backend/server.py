@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 from mongoengine import connect
-from backend import constants
+from constants import MONGO_KEY
 import os
-from backend.models import Sandwich
+from models import Sandwich
 
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
     
-connect(db='tfw', host=constants.MONGO_KEY)
+connect(db='tfw', host=MONGO_KEY)
 
 @app.route('/')
 def index():
