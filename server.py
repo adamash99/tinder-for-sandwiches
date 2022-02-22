@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from mongoengine import connect
 import os
-from models import Sandwich
-from constants import MONGO_KEY
+from backend.models import Sandwich
+from backend.constants import MONGO_KEY
 
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
