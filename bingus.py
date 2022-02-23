@@ -4,8 +4,9 @@ import os
 from backend.models import Sandwich
 from backend.constants import MONGO_KEY
 
+print('here')
 
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='./frontend/build', static_url_path='/')
     
 connect(db='tfw', host=MONGO_KEY)
 
