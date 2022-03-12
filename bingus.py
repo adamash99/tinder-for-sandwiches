@@ -1,6 +1,13 @@
 from flask import Flask, request, jsonify
 from mongoengine import connect
 import os
+
+from flask import Flask
+
+app = Flask(__name__)
+
+from app import routes
+
 from backend.models import Sandwich
 from backend.constants import MONGO_KEY
 
