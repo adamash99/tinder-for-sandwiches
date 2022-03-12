@@ -6,7 +6,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from app import routes
+from backend import routes
 
 from backend.models import Sandwich
 from backend.constants import MONGO_KEY
